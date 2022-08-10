@@ -1,0 +1,28 @@
+.root {
+  display: flex;
+  width: 80px;
+  height: 29px;
+  border-radius: 7px;
+}
+
+.btnAdd {
+  flex: auto;
+  border: 1px solid #000000;
+  border-bottom-right-radius: 7px;
+  border-top-right-radius: 7px;
+}
+
+.buyQuantity {
+  flex: auto;
+  text-align: center;
+  line-height: 29px;
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+}
+
+.btnReduce {
+  flex: auto;
+  border: 1px solid #000000;
+  border-bottom-left-radius: 7px;
+  border-top-left-radius: 7px;
+}

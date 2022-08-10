@@ -1,0 +1,41 @@
+.root {
+  display: inline-flex;
+  align-items: center;
+
+  margin-bottom: 36px;
+}
+
+.title {
+  padding-right: 26px;
+  line-height: 17px;
+}
+
+.root label {
+  border-radius: 50%;
+  cursor: pointer;
+  transition: opacity ease-in-out 0.1s;
+}
+
+.root label:hover {
+  opacity: 0.7;
+}
+
+.radioBtn {
+  position: absolute;
+  opacity: 0;
+}
+
+.root label:not(:last-child) {
+  padding-right: 8px;
+}
+
+.customRadio {
+  width: 31px;
+  height: 31px;
+  border-radius: 50%;
+  background-color: #39393a;
+}
+
+.radioBtn:checked + .customRadio {
+  box-shadow: 0 0 5px;
+}

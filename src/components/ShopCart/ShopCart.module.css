@@ -1,0 +1,25 @@
+.root {
+  cursor: pointer;
+}
+
+.shopCart {
+  position: absolute;
+}
+
+.count {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  align-items: center;
+  text-align: center;
+
+  color: #ff0101;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #cdcdcd;
+  left: 15px;
+  bottom: 5px;
+}

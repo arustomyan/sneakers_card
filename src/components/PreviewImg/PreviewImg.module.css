@@ -1,0 +1,20 @@
+.root {
+  padding: 5px;
+  display: flex;
+  flex: auto;
+  max-height: 293px;
+  border: 1px solid #dbdbdb;
+  border-radius: 15px;
+  align-items: center;
+  overflow: hidden;
+}
+
+.imgWrapper {
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.img {
+  object-fit: cover;
+  width: 100%;
+}

@@ -1,0 +1,8 @@
+.root th {
+  text-align: left;
+  padding-bottom: 16px;
+}
+
+.root td {
+  text-align: right;
+}

@@ -1,0 +1,17 @@
+.root {
+  padding: 0 29px;
+  display: flex;
+  max-height: 80px;
+  justify-content: space-between;
+  column-gap: 15px;
+}
+
+.previewImg {
+  max-width: 80px;
+  transition: border ease-in-out 0.1s;
+  cursor: pointer;
+}
+
+.previewImg:hover {
+  border: 1px solid #000;
+}
