@@ -1,18 +1,9 @@
 import React from 'react';
 import styles from './SelectColor.module.css';
+import data from '../../fakeData.json';
 
-interface SelectColorProps {
-  variation?: object[];
-}
-
-function SelectColor({ variation }: SelectColorProps) {
-  const variationFake = [
-    { color: '#39393A', article: 1531511 },
-    { color: '#B9B3B0', article: 425 },
-    { color: '#5D70CE', article: 25 },
-    { color: '#FF9200', article: 32425 },
-    { ...variation },
-  ];
+function SelectColor() {
+  const variationFake = Object.values(data[0].variation);
 
   return (
     <div className={styles.root}>

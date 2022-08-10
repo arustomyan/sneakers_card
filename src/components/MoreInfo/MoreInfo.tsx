@@ -2,13 +2,7 @@ import React from 'react';
 import styles from './MoreInfo.module.css';
 import UnderlineButton from '../UnderlineButton/UnderlineButton';
 import Characteristics from '../Characteristics/Characteristics';
-import { Root } from '../../model/obj';
-
-const obj: Root = [
-  { characteristic: 'Категория', value: 'Кроссовки' },
-  { characteristic: 'Производитель', value: 'Nike' },
-  { characteristic: 'Гарантия', value: '2 года' },
-];
+import data from '../../fakeData.json';
 
 function MoreInfo() {
   return (
@@ -18,7 +12,7 @@ function MoreInfo() {
         <UnderlineButton>Характеристики</UnderlineButton>
         <UnderlineButton>Отзывы</UnderlineButton>
       </div>
-      <Characteristics characteristics={obj} />
+      <Characteristics characteristics={Object.values(data[0].characteristics)} />
     </div>
   );
 }

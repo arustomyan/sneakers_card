@@ -5,25 +5,30 @@ import SelectColor from '../SelectColor/SelectColor';
 import PreviewImg from '../PreviewImg/PreviewImg';
 import BuyButtons from '../BuyButtons/BuyButtons';
 import MoreInfo from '../MoreInfo/MoreInfo';
-import img1 from '../../image/img1.png';
 import Slider from '../Slider/Slider';
+import data from '../../fakeData.json';
 
 function Product() {
+  const { price, article } = data[0].variation[34934934];
+
   return (
     <div className={styles.root}>
       <Header />
 
       <div className={styles.content}>
-        <p className={styles.article}>Артикул: 34934934</p>
+        <p className={styles.article}>Артикул: {article}</p>
         <div className={styles.contentContainer}>
           <div className={styles.preview}>
-            <PreviewImg imgLink={img1} />
+            <PreviewImg
+              imgLink={data[0].variation['34934934'].img}
+              modifier={styles.previewActive}
+            />
             <Slider />
           </div>
 
           <div className={styles.info}>
             <span className={styles.price}>
-              12 000 <span className={styles.currency}>₽</span>
+              {price} <span className={styles.currency}>₽</span>
             </span>
 
             <SelectColor />

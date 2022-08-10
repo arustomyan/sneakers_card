@@ -1,16 +1,14 @@
 import React from 'react';
 import styles from './Slider.module.css';
 import PreviewImg from '../PreviewImg/PreviewImg';
-import img2 from '../../image/img2.png';
-import img3 from '../../image/img3.png';
-import img4 from '../../image/img4.png';
+import data from '../../fakeData.json';
 
 function Slider() {
   return (
     <div className={styles.root}>
-      <PreviewImg imgLink={img2} modifier={styles.previewImg} />
-      <PreviewImg imgLink={img3} modifier={styles.previewImg} />
-      <PreviewImg imgLink={img4} modifier={styles.previewImg} />
+      <PreviewImg imgLink={data[0].variation['34934935'].img} modifier={styles.previewImg} />
+      <PreviewImg imgLink={data[0].variation['34934936'].img} modifier={styles.previewImg} />
+      <PreviewImg imgLink={data[0].variation['34934937'].img} modifier={styles.previewImg} />
     </div>
   );
 }

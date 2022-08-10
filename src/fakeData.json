@@ -1,0 +1,41 @@
+[
+  {
+    "product": "Nike Air Force Travis Scott",
+    "characteristics": [
+      { "characteristic": "Категория", "value": "Кроссовки" },
+      { "characteristic": "Производитель", "value": "Nike" },
+      { "characteristic": "Гарантия", "value": "2 года" }
+    ],
+    "brandLogo": "link",
+    "variation": {
+      "34934934": {
+        "colorName": "Black",
+        "article": 34934934,
+        "color": "#39393A",
+        "img": "https://raw.githubusercontent.com/varustomyan/sneakers_card/main/src/image/img1.png",
+        "price": 12000
+      },
+      "34934935": {
+        "colorName": "Grey",
+        "article": 34934935,
+        "color": "#B9B3B0",
+        "img": "https://raw.githubusercontent.com/varustomyan/sneakers_card/main/src/image/img2.png",
+        "price": 11999
+      },
+      "34934936": {
+        "colorName": "Blue",
+        "article": 34934936,
+        "color": "#5D70CE",
+        "img": "https://raw.githubusercontent.com/varustomyan/sneakers_card/main/src/image/img3.png",
+        "price": 12001
+      },
+      "34934937": {
+        "colorName": "Yellow",
+        "article": 34934937,
+        "color": "#FF9200",
+        "img": "https://raw.githubusercontent.com/varustomyan/sneakers_card/main/src/image/img4.png",
+        "price": 7000
+      }
+    }
+  }
+]
