@@ -1,6 +1,8 @@
-import React from 'react'
+import React from 'react';
+import Product from './components/Product/Product';
+
 function App() {
-  return <div></div>
+  return <Product />;
 }
 
-export default App
+export default App;

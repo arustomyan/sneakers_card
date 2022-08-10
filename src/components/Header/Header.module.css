@@ -1,0 +1,15 @@
+.root {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 27px;
+}
+
+.brandLogo {
+}
+
+.title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+}

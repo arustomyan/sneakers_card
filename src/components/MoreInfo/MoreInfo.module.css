@@ -1,0 +1,22 @@
+.root {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav {
+  display: flex;
+
+  margin-bottom: 20px;
+}
+
+.nav button {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+
+  flex: auto;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #dbdbdb;
+}
