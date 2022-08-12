@@ -1,12 +1,15 @@
 .root {
+  position: relative;
   cursor: pointer;
 }
 
 .shopCart {
+  margin-right: 5px;
   position: absolute;
 }
 
 .count {
+  position: absolute;
   font-style: normal;
   font-weight: 700;
   font-size: 12px;
@@ -15,11 +18,10 @@
   text-align: center;
 
   color: #ff0101;
-  position: relative;
   width: 16px;
   height: 16px;
   border-radius: 50%;
   background-color: #cdcdcd;
   left: 15px;
-  bottom: 5px;
+  bottom: 20px;
 }

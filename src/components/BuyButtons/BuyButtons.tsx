@@ -1,14 +1,35 @@
 import React from 'react';
+import { useSearchParams } from 'react-router-dom';
 import styles from './BuyButtons.module.css';
-import QuantityButton from '../QuantityButton/QuantityButton';
-import UnderlineButton from '../UnderlineButton/UnderlineButton';
+import QuantityButton from '../shared/QuantityButton/QuantityButton';
+import UnderlineButton from '../shared/UnderlineButton/UnderlineButton';
+import { useAppDispatch, useAppSelector } from '../../store';
+import { addToCart } from '../../store/slices/shopCartSlice';
 
 function BuyButtons() {
+  const { variation } = useAppSelector((state) => state.product.product);
+  const { shopCart } = useAppSelector((state) => state);
+  const dispatch = useAppDispatch();
+  const [searchParams] = useSearchParams();
+
+  const article = searchParams.get('article') || '';
+
+  const countInCart: number = shopCart.cart[article] ? shopCart.cart[article].count : 0;
+
+  const handleClick = () => {
+    const count = countInCart + shopCart.count;
+    dispatch(
+      addToCart({
+        [article]: { product: variation[article], count },
+      }),
+    );
+  };
+
   return (
     <div className={styles.root}>
       <QuantityButton />
       <UnderlineButton>Купить в 1 клик</UnderlineButton>
-      <UnderlineButton>
+      <UnderlineButton onClick={handleClick}>
         <svg
           width='17'
           height='15'

@@ -3,14 +3,17 @@ export interface Characteristic {
   value: string;
 }
 
+export interface Variant {
+  name: string;
+  colorName: string;
+  article: number;
+  color: string;
+  img: string;
+  price: number;
+}
+
 export interface Variation {
-  [index: string]: {
-    colorName: string;
-    article: number;
-    color: string;
-    img: string;
-    price: number;
-  };
+  [index: string]: Variant;
 }
 
 export interface IProduct {

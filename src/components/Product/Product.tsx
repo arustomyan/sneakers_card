@@ -3,14 +3,14 @@ import { Navigate, useSearchParams } from 'react-router-dom';
 import Header from '../Header/Header';
 import SelectColor from '../shared/SelectColor/SelectColor';
 import PreviewImg from '../shared/PreviewImg/PreviewImg';
-import BuyButtons from '../shared/BuyButtons/BuyButtons';
+import BuyButtons from '../BuyButtons/BuyButtons';
 import MoreInfo from '../MoreInfo/MoreInfo';
 import Slider from '../Slider/Slider';
 import Loader from '../shared/Loader/Loader';
 import { addProduct } from '../../store/slices/productSlice';
 import { RootState, useAppDispatch, useAppSelector } from '../../store';
-import data from '../../fakeData.json';
 import styles from './Product.module.css';
+import data from '../../fakeData.json';
 
 function Product() {
   const { product, isLoading } = useAppSelector((state: RootState) => state.product);

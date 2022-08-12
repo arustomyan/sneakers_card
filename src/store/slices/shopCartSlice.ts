@@ -1,19 +1,21 @@
-import { createSlice } from '@reduxjs/toolkit';
-import { IProduct } from '../../model/product';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { Variant } from '../../model/product';
 
 interface ICart {
-  product: IProduct;
-  count: number;
+  [index: string | number]: {
+    product: Variant;
+    count: number;
+  };
 }
 
 interface IShopCart {
-  cart: ICart[];
+  cart: ICart;
   count: number;
   isLoading: boolean;
 }
 
 const initialState: IShopCart = {
-  cart: [],
+  cart: {},
   count: 1,
   isLoading: true,
 };
@@ -22,7 +24,10 @@ export const shopCartSlice = createSlice({
   name: 'shopCart',
   initialState,
   reducers: {
-    // addToCart: (state, action: PayloadAction<IProduct>) => {},
+    addToCart: (state, action: PayloadAction<ICart>) => {
+      state.cart = { ...state.cart, ...action.payload };
+      state.count = 1;
+    },
     // removeFromCart: (state, action: PayloadAction<IProduct>) => {},
     // clearCart: (state, action: PayloadAction<IProduct>) => {},
     increaseCount: (state) => {
@@ -34,7 +39,7 @@ export const shopCartSlice = createSlice({
   },
 });
 
-export const { increaseCount, decreaseCount } = shopCartSlice.actions;
+export const { addToCart, increaseCount, decreaseCount } = shopCartSlice.actions;
 
 const shopCartReducer = shopCartSlice.reducer;
 export default shopCartReducer;

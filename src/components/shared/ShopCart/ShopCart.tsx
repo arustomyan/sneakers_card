@@ -1,7 +1,12 @@
 import React from 'react';
 import styles from './ShopCart.module.css';
+import { useAppSelector } from '../../../store';
 
 function ShopCart() {
+  const cart: object = useAppSelector((state) => state.shopCart.cart);
+
+  const count = Object.values(cart).reduce((prev, current) => current.count + prev, 0);
+
   return (
     <div className={styles.root}>
       <svg width='25' height='25' viewBox='0 0 25 25' fill='none' className={styles.shopCart}>
@@ -10,7 +15,7 @@ function ShopCart() {
           fill='black'
         />
       </svg>
-      <div className={styles.count}>5</div>
+      {Boolean(count) && <div className={styles.count}>{count}</div>}
     </div>
   );
 }

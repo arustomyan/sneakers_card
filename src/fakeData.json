@@ -9,6 +9,7 @@
     "brandLogo": "link",
     "variation": {
       "34934934": {
+        "name": "Nike Air Force Travis Scott/Black",
         "colorName": "Black",
         "article": 34934934,
         "color": "#39393A",
@@ -16,6 +17,7 @@
         "price": 12000
       },
       "34934935": {
+        "name": "Nike Air Force Travis Scott/Grey",
         "colorName": "Grey",
         "article": 34934935,
         "color": "#B9B3B0",
@@ -23,6 +25,7 @@
         "price": 11999
       },
       "34934936": {
+        "name": "Nike Air Force Travis Scott/Blue",
         "colorName": "Blue",
         "article": 34934936,
         "color": "#5D70CE",
@@ -30,6 +33,7 @@
         "price": 12001
       },
       "34934937": {
+        "name": "Nike Air Force Travis Scott/Yellow",
         "colorName": "Yellow",
         "article": 34934937,
         "color": "#FF9200",
