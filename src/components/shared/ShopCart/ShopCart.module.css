@@ -1,6 +1,7 @@
 .root {
   position: relative;
   cursor: pointer;
+  height: 25px;
 }
 
 .shopCart {
@@ -22,5 +23,5 @@
   border-radius: 50%;
   background-color: #cdcdcd;
   left: 15px;
-  bottom: 20px;
+  bottom: 15px;
 }
