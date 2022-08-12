@@ -6,6 +6,7 @@ import { IProduct } from '../../../model/product';
 
 function SelectColor() {
   const { variation }: IProduct = useAppSelector((state) => state.product.product);
+
   const [searchParams, setSearchParams] = useSearchParams();
 
   const article = searchParams.get('article') || '';
