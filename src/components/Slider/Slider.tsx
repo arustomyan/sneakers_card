@@ -1,14 +1,31 @@
 import React from 'react';
+import { useSearchParams } from 'react-router-dom';
 import styles from './Slider.module.css';
-import PreviewImg from '../PreviewImg/PreviewImg';
-import data from '../../fakeData.json';
+import PreviewImg from '../shared/PreviewImg/PreviewImg';
+import { RootState, useAppSelector } from '../../store';
 
 function Slider() {
+  const { variation } = useAppSelector((state: RootState) => state.product.product);
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  const article: string = searchParams.get('article') || '';
+  const articles: string[] = Object.keys(variation).filter((item) => item !== article);
+
+  const handleClick = (value: string) => {
+    setSearchParams({ article: value });
+  };
+
   return (
     <div className={styles.root}>
-      <PreviewImg imgLink={data[0].variation['34934935'].img} modifier={styles.previewImg} />
-      <PreviewImg imgLink={data[0].variation['34934936'].img} modifier={styles.previewImg} />
-      <PreviewImg imgLink={data[0].variation['34934937'].img} modifier={styles.previewImg} />
+      {articles.map((item) => (
+        <PreviewImg
+          imgLink={variation[item].img}
+          modifier={styles.previewImg}
+          onClick={() => {
+            handleClick(item);
+          }}
+        />
+      ))}
     </div>
   );
 }

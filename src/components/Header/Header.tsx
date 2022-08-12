@@ -1,8 +1,11 @@
 import React from 'react';
 import styles from './Header.module.css';
-import ShopCart from '../ShopCart/ShopCart';
+import ShopCart from '../shared/ShopCart/ShopCart';
+import { useAppSelector } from '../../store';
 
 function Header() {
+  const title: string = useAppSelector((state) => state.product.product.product);
+
   return (
     <div className={styles.root}>
       <svg width='51' height='18' viewBox='0 0 51 18' fill='none' className={styles.brandLogo}>
@@ -11,7 +14,7 @@ function Header() {
           fill='#131212'
         />
       </svg>
-      <h1 className={styles.title}>Nike Air Force Travis Scott</h1>
+      <h1 className={styles.title}>{title}</h1>
 
       <ShopCart />
     </div>

@@ -10,13 +10,13 @@
   line-height: 17px;
 }
 
-.root label {
+.label {
   border-radius: 50%;
   cursor: pointer;
   transition: opacity ease-in-out 0.1s;
 }
 
-.root label:hover {
+.label:hover {
   opacity: 0.7;
 }
 
@@ -25,7 +25,7 @@
   opacity: 0;
 }
 
-.root label:not(:last-child) {
+.label:not(:last-child) {
   padding-right: 8px;
 }
 

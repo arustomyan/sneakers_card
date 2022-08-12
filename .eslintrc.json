@@ -30,6 +30,7 @@
     "react/self-closing-comp": "off",
     "jsx-a11y/label-has-associated-control": "off",
     "spaced-comment": "off",
-    "react/require-default-props": "off"
+    "react/require-default-props": "off",
+    "no-param-reassign": "off"
   }
 }
