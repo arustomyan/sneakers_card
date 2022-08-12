@@ -1,7 +1,5 @@
 .root {
   display: inline-flex;
   justify-content: space-between;
-
-  /*Удалить*/
   margin-bottom: 55px;
 }

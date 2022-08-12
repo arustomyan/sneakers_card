@@ -27,3 +27,15 @@
     row-gap: 20px;
   }
 }
+
+@media screen and (max-width: 420px) {
+  .root {
+    padding: 0 29px;
+    margin: 0;
+    max-height: 80px;
+    flex-direction: row;
+    max-width: max-content;
+    justify-content: space-between;
+    column-gap: 15px;
+  }
+}

@@ -20,3 +20,7 @@
   padding-bottom: 5px;
   border-bottom: 1px solid #dbdbdb;
 }
+
+.nav button:hover {
+  border-bottom: 1px solid #000;
+}

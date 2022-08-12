@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './MoreInfo.module.css';
 import UnderlineButton from '../shared/UnderlineButton/UnderlineButton';
 import Characteristics from './Characteristics/Characteristics';
 import { RootState, useAppSelector } from '../../store';
 
 function MoreInfo() {
+  const [section] = useState('characteristics');
+
   const { characteristics } = useAppSelector((state: RootState) => state.product.product);
 
   return (
@@ -14,7 +16,9 @@ function MoreInfo() {
         <UnderlineButton>Характеристики</UnderlineButton>
         <UnderlineButton>Отзывы</UnderlineButton>
       </div>
-      <Characteristics characteristics={Object.values(characteristics)} />
+      {section === 'characteristics' && (
+        <Characteristics characteristics={Object.values(characteristics)} />
+      )}
     </div>
   );
 }

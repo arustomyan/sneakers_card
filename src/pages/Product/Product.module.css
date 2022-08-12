@@ -1,17 +1,3 @@
-.root {
-  display: flex;
-  flex: auto;
-  flex-direction: column;
-  flex-wrap: wrap;
-  height: 100%;
-}
-
-.content {
-  display: flex;
-  flex-direction: column;
-  flex: auto;
-}
-
 .article {
   font-size: 10px;
   line-height: 12px;
@@ -24,6 +10,7 @@
   flex: auto;
   justify-content: space-between;
   flex-wrap: wrap;
+  min-height: 411px;
 }
 
 .preview {
@@ -63,6 +50,7 @@
 .previewActive {
   min-width: 208px;
   height: 293px;
+  width: 329px;
   margin-bottom: 20px;
 }
 
@@ -78,5 +66,12 @@
 
   .info {
     max-width: 500px;
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .preview {
+    flex-direction: column;
   }
 }

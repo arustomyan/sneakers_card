@@ -28,7 +28,8 @@ function Product() {
   }
 
   return (
-    <div className={styles.root}>
+    // eslint-disable-next-line react/jsx-no-useless-fragment
+    <>
       {isLoading ? (
         <Loader />
       ) : (
@@ -59,7 +60,7 @@ function Product() {
           </div>
         </>
       )}
-    </div>
+    </>
   );
 }
 

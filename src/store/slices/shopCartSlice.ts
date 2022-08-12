@@ -11,13 +11,11 @@ interface ICart {
 interface IShopCart {
   cart: ICart;
   count: number;
-  isLoading: boolean;
 }
 
 const initialState: IShopCart = {
   cart: {},
   count: 1,
-  isLoading: true,
 };
 
 export const shopCartSlice = createSlice({
