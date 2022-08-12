@@ -14,3 +14,7 @@
   top: 2px;
   margin-right: 5px;
 }
+
+.root:hover {
+  opacity: 0.65;
+}

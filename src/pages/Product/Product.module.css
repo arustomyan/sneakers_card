@@ -23,13 +23,12 @@
   display: flex;
   flex: auto;
   justify-content: space-between;
-  /*height: 100%;*/
+  flex-wrap: wrap;
 }
 
 .preview {
   display: flex;
   flex: auto;
-  /*height: auto;*/
   justify-content: space-between;
   flex-direction: column;
   max-width: 329px;
@@ -63,4 +62,21 @@
 
 .previewActive {
   min-width: 208px;
+  height: 293px;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 780px) {
+  .contentContainer {
+    justify-content: center;
+  }
+
+  .preview {
+    max-width: 500px;
+    flex-direction: unset;
+  }
+
+  .info {
+    max-width: 500px;
+  }
 }

@@ -14,6 +14,7 @@ function Header() {
           fill='#131212'
         />
       </svg>
+
       <h1 className={styles.title}>{title}</h1>
 
       <ShopCart />

@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react';
 import { Navigate, useSearchParams } from 'react-router-dom';
-import Header from '../Header/Header';
-import SelectColor from '../shared/SelectColor/SelectColor';
-import PreviewImg from '../shared/PreviewImg/PreviewImg';
-import BuyButtons from '../BuyButtons/BuyButtons';
-import MoreInfo from '../MoreInfo/MoreInfo';
-import Slider from '../Slider/Slider';
-import Loader from '../shared/Loader/Loader';
-import { addProduct } from '../../store/slices/productSlice';
 import { RootState, useAppDispatch, useAppSelector } from '../../store';
+import { addProduct } from '../../store/slices/productSlice';
+import Header from '../../components/Header/Header';
+import SelectColor from '../../components/shared/SelectColor/SelectColor';
+import PreviewImg from '../../components/shared/PreviewImg/PreviewImg';
+import BuyButtons from '../../components/BuyButtons/BuyButtons';
+import MoreInfo from '../../components/MoreInfo/MoreInfo';
+import Slider from '../../components/Slider/Slider';
+import Loader from '../../components/shared/Loader/Loader';
 import styles from './Product.module.css';
 import data from '../../fakeData.json';
 
