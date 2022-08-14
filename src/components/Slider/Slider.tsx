@@ -24,6 +24,7 @@ function Slider() {
           onClick={() => {
             handleClick(item);
           }}
+          key={item}
         />
       ))}
     </div>
