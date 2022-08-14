@@ -4,7 +4,7 @@ import styles from './BuyButtons.module.css';
 import QuantityButton from '../shared/QuantityButton/QuantityButton';
 import UnderlineButton from '../shared/UnderlineButton/UnderlineButton';
 import { useAppDispatch, useAppSelector } from '../../store';
-import { addToCart } from '../../store/slices/shopCartSlice';
+import { addToCart, decreaseCount, increaseCount } from '../../store/slices/shopCartSlice';
 
 function BuyButtons() {
   const { variation } = useAppSelector((state) => state.product.product);
@@ -25,9 +25,21 @@ function BuyButtons() {
     );
   };
 
+  const IncreaseCount = () => {
+    dispatch(increaseCount());
+  };
+
+  const DecreaseCount = () => {
+    if (shopCart.count > 1) dispatch(decreaseCount());
+  };
+
   return (
     <div className={styles.root}>
-      <QuantityButton />
+      <QuantityButton
+        handleAdding={IncreaseCount}
+        handleDecrease={DecreaseCount}
+        count={shopCart.count}
+      />
       <UnderlineButton>Купить в 1 клик</UnderlineButton>
       <UnderlineButton onClick={handleClick}>
         <svg
