@@ -28,9 +28,31 @@ function MoreInfo() {
   return (
     <div className={styles.root}>
       <div className={styles.nav}>
-        <UnderlineButton onClick={handleDescription}>Описание</UnderlineButton>
-        <UnderlineButton onClick={handleCharacteristics}>Характеристики</UnderlineButton>
-        <UnderlineButton onClick={handleFeedback}>Отзывы</UnderlineButton>
+        <UnderlineButton
+          onClick={handleDescription}
+          // prettier-ignore
+          modifier={[
+            styles.button,
+            section === 'description' ? styles.button__active : ''
+          ].join(' ',)}
+        >
+          Описание
+        </UnderlineButton>
+        <UnderlineButton
+          onClick={handleCharacteristics}
+          modifier={[
+            styles.button,
+            section === 'characteristics' ? styles.button__active : '',
+          ].join(' ')}
+        >
+          Характеристики
+        </UnderlineButton>
+        <UnderlineButton
+          onClick={handleFeedback}
+          modifier={[styles.button, section === 'feedback' ? styles.button__active : ''].join(' ')}
+        >
+          Отзывы
+        </UnderlineButton>
       </div>
       {section === 'characteristics' && (
         <Characteristics characteristics={Object.values(characteristics)} />

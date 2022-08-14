@@ -9,7 +9,7 @@
   margin-bottom: 20px;
 }
 
-.nav button {
+.button {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -21,6 +21,10 @@
   border-bottom: 1px solid #dbdbdb;
 }
 
-.nav button:hover {
+.button:hover {
+  border-bottom: 1px solid #000;
+}
+
+.button__active {
   border-bottom: 1px solid #000;
 }
