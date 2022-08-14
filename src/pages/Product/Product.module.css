@@ -48,9 +48,9 @@
 }
 
 .previewActive {
-  min-width: 208px;
   height: 293px;
-  width: 329px;
+  min-width: 250px;
+  max-width: 329px;
   margin-bottom: 20px;
 }
 
