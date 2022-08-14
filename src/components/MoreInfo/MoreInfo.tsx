@@ -6,8 +6,10 @@ import { RootState, useAppSelector } from '../../store';
 import Description from './Description/Description';
 import Feedback from './Feedback/Feedback';
 
+type stateSection = [string, (section: string) => void];
+
 function MoreInfo() {
-  const [section, setSection] = useState('characteristics');
+  const [section, setSection]: stateSection = useState('characteristics');
 
   const { characteristics } = useAppSelector((state: RootState) => state.product.product);
 
