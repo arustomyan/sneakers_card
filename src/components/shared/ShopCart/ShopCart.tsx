@@ -1,12 +1,11 @@
 import React from 'react';
 import styles from './ShopCart.module.css';
-import { useAppSelector } from '../../../store';
 
-function ShopCart() {
-  const cart: object = useAppSelector((state) => state.shopCart.cart);
+interface IShopCart {
+  count: number;
+}
 
-  const count = Object.values(cart).reduce((prev, current) => current.count + prev, 0);
-
+function ShopCart({ count }: IShopCart) {
   return (
     <div className={styles.root}>
       <svg width='25' height='25' viewBox='0 0 25 25' fill='none' className={styles.shopCart}>

@@ -6,6 +6,10 @@ import { useAppSelector } from '../../store';
 function Header() {
   const title: string = useAppSelector((state) => state.product.product.product);
 
+  const cart: object = useAppSelector((state) => state.shopCart.cart);
+
+  const count = Object.values(cart).reduce((prev, current) => current.count + prev, 0);
+
   return (
     <div className={styles.root}>
       <svg width='51' height='18' viewBox='0 0 51 18' fill='none' className={styles.brandLogo}>
@@ -17,7 +21,7 @@ function Header() {
 
       <h1 className={styles.title}>{title}</h1>
 
-      <ShopCart />
+      <ShopCart count={count} />
     </div>
   );
 }
