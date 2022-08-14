@@ -2,11 +2,11 @@ import React from 'react';
 import styles from './Header.module.css';
 import ShopCart from '../shared/ShopCart/ShopCart';
 import { useAppSelector } from '../../store';
+import { ICart } from '../../model/shopCart';
 
 function Header() {
   const title: string = useAppSelector((state) => state.product.product.product);
-
-  const cart: object = useAppSelector((state) => state.shopCart.cart);
+  const cart: ICart = useAppSelector((state) => state.shopCart.cart);
 
   const count = Object.values(cart).reduce((prev, current) => current.count + prev, 0);
 

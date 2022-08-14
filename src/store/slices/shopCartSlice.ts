@@ -1,12 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { Variant } from '../../model/product';
-
-interface ICart {
-  [index: string | number]: {
-    product: Variant;
-    count: number;
-  };
-}
+import { ICart } from '../../model/shopCart';
 
 interface IShopCart {
   cart: ICart;
